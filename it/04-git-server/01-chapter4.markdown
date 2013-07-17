@@ -52,7 +52,7 @@ Probabilmente il protocollo più utilizzato per Git è SSH. Questo perché un ac
 
 Per clonare un repository Git via SSH, puoi specificare un URL ssh:// come questo:
 
-	$ git clone ssh://user@server:project.git
+	$ git clone ssh://user@server/project.git
 
 O non specificare proprio il protocollo — Git utilizza SSH non lo specifichi:
 	
@@ -722,7 +722,7 @@ Se non vuoi svolgere tutto il lavoro di configurazione di un tuo server Git, hai
 
 Oggi, hai un'enorme quantità di opzioni di hosting tra cui scegliere, ognuna con differenti vantaggi e svantaggi. Per vedere una lista aggiornata, controlla la pagina GitHosting sul wiki principale di Git:
 
-	http://git.or.cz/gitwiki/GitHosting
+	https://git.wiki.kernel.org/index.php/GitHosting
 
 Dato che non possiamo vederli tutti, e dato che lavoro principalmente su uno di questi, in questa sezione vedremo come impostare un account e creare un nuovo progetto su GitHub. Questo ti darà una idea di come funzionano.
 

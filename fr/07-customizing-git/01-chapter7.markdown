@@ -113,7 +113,6 @@ Fixez-le simplement sur le chemin du fichier qui contient les informations simil
 
 #### help.autocorrect ####
 
-Cette option n'est disponible qu'à partir de la version 1.6.1.
 Si vous avez fait une faute de frappe en tapant une commande dans Git 1.6, il vous affichera une liste de commandes ressemblantes :
 
 	$ git com
@@ -219,7 +218,7 @@ ou vous pouvez éditer votre fichier `~/.gitconfig` pour y ajouter ces lignes :
 	[merge]
 	  tool = extMerge
 	[mergetool "extMerge"]
-	  cmd = extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	  cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	  trustExitCode = false
 	[diff]
 	  external = extDiff

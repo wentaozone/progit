@@ -83,9 +83,9 @@ SSH est un protocole authentifié ; et comme il est très répandu, il est gén
 
 Pour cloner un dépôt Git à travers SSH, spécifiez le préfixe `ssh://` dans l'URL comme ceci :
 
-	$ git clone ssh://utilisateur@serveur:projet.git
+	$ git clone ssh://utilisateur@serveur/projet.git
 
-ou ne spécifiez  pas de protocole du tout — Git choisit SSH par défaut si vous n'êtes pas explicite :
+ou vous pouvez utiliser la syntaxe scp habituelle avec le protocole SSH :
 
 	$ git clone utilisateur@serveur:projet.git
 
@@ -405,8 +405,6 @@ Premièrement, il faut activer le crochet :
 	$ cd projet.git
 	$ mv hooks/post-update.sample hooks/post-update
 	$ chmod a+x hooks/post-update
-
-Si vous utilisez une version de Git antérieure à 1.6, la commande `mv` n'est pas nécessaire car Git n'a commencé à utiliser le nommage des exemples de crochet en utilisant le suffixe .sample que récemment.
 
 Quelle est l'action de ce crochet `post-update` ?
 Il contient simplement ceci :
@@ -784,7 +782,7 @@ Cette règle sera juste ajoutée à l'ensemble des règles préexistantes du dé
 
 Du coup, il est nécessaire d'expliciter la politique d'application des règles de contrôle d'accès.
 
-Il existe deux niveaux de contrôle d'accès dans gitolite.
+Il existe deux niveaux de contrôle d'accès dans Gitolite.
 Le premier réside au niveau du dépôt.
 Si vous avez un droit d'accès en lecture (resp. en écriture) à *n'importe quelle* `ref` du dépôt, alors vous avez accès en lecture (resp. en écriture) au dépôt.
 
@@ -963,7 +961,7 @@ Même si vous montez et faites fonctionner votre serveur en interne, vous souhai
 Aujourd'hui, vous avez à disposition un nombre impressionnant d'options d'hébergement, chacune avec différents avantages et désavantages.
 Pour une liste à jour, référez-vous à la page suivante :
 
-	http://en.wikipedia.org/wiki/Git_(software)#Source_code_hosting
+	https://git.wiki.kernel.org/index.php/GitHosting
 
 Comme nous ne pourrons pas les passer toutes en revue, et comme de plus, il s'avère que je travaille pour l'une d'entre elles, nous utiliserons ce chapitre pour détailler la création d'un compte et d'un nouveau projet sur GitHub.
 Cela vous donnera une idée de ce qui est nécessaire.
